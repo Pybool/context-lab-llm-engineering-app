@@ -1,0 +1,16 @@
+{
+  "name": "llm-context-lab",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["apps/server", "apps/web"],
+  "scripts": {
+    "dev": "concurrently -k -n API,WEB -c cyan,green \"npm run dev -w @lab/server\" \"npm run dev -w @lab/web\"",
+    "dev:server": "npm run dev -w @lab/server",
+    "dev:web": "npm run dev -w @lab/web",
+    "tokenizer:setup": "npm run tokenizer:setup -w @lab/server",
+    "test": "npm run test -w @lab/server",
+    "typecheck": "npm run typecheck -w @lab/server && npm run typecheck -w @lab/web",
+    "build": "npm run build -w @lab/server && npm run build -w @lab/web"
+  },
+  "devDependencies": { "concurrently": "^9.2.1" }
+}

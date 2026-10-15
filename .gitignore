@@ -1,0 +1,7 @@
+node_modules/
+.next/
+dist/
+*.tsbuildinfo
+apps/server/data/*.json
+apps/server/data/tokenizer/*.json
+.DS_Store

@@ -1,0 +1,23 @@
+{
+  "http": {
+    "port": 4000,
+    "allowedOrigin": "http://localhost:3000"
+  },
+  "model": {
+    "ollamaUrl": "http://127.0.0.1:11434",
+    "name": "qwen2.5:1.5b",
+    "contextWindowTokens": 4096,
+    "outputTokens": 256,
+    "temperature": 0.2,
+    "timeoutMs": 120000
+  },
+  "budget": {
+    "policyLimitTokens": 2048,
+    "safetyMarginTokens": 32,
+    "overLimitAction": "reject"
+  },
+  "systemPrompt": "You are a careful assistant helping users learn LLM quality engineering. Always be explicit about uncertainty. Never perform monetary arithmetic with floating point numbers.",
+  "qa": {
+    "exposeOllamaInvocationMetrics": true
+  }
+}
